@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Genius Resource</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <header class="container-fluid mt-3 ">
+        <div class = "p-3 bg-primary-subtle rounded">
+            <h3 class = "">Interactive</h3>
+            <p class="">Geometry Genius</p>
+        </div>
+        <div class="d-flex justify-content-end p-2" style="margin-top: -80px;">
+            <a href="blog.html" <button  type="button" class = "btn btn-primary px-3">Blog</button></a>
+        </div>
+    </header>
+    <main>
+        <section id="section" class="mt-5 m-3">
+            <div class="row row-cols-1 row-cols-md-4 g-4 ">
+                <div class="col">
+                  <div id ="firstCard" class="card h-100" onmouseenter="randomColor(this)" onmouseout="this.style.backgroundColor=''">
+                    <img src="images/triangle.png" class="card-img-top mt-2 p-3" height="200px" alt="">
+                    <div class="card-body text-center">
+                      <h5 class="card-title" id="first-name">Triangle</h5>
+                      <p class="card-text">Area(A) = 0.5 x b x h</p>
+                      <div class="d-flex justify-content-center mb-3">
+                        <input id = "triangle-base-field" type="text" class="" placeholder="b" style="width:60px"><span class="mx-2"> cm</span>
+                        <input id = "triangle-height-field" type="text" placeholder="h" style="width:60px"><span class="mx-2"> cm</span>
+                       </div>
+                      <button id="btn-triangle" class="btn btn-primary btn-xxl px-5">Calculate</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" onmouseenter="randomColor(this)" onmouseout="this.style.backgroundColor=''">
+                      <img src="images/rectangle.png" class="card-img-top mt-2 p-3" height="200px" alt="">
+                      <div class="card-body text-center">
+                        <h5 class="card-title" id="second-name">Rectangle</h5>
+                        <p class="card-text">Area(A) = w x l</p>
+                        <div class="d-flex justify-content-center mb-3">
+                          <input id = "rectangle-base-field" type="text" class="" placeholder="w" style="width:60px"><span class="mx-2"> cm</span>
+                          <input id = "rectangle-height-field" type="text" placeholder="l" style="width:60px"><span class="mx-2"> cm</span>
+                        </div>
+                        <button id="btn-rectangle" class="btn btn-primary btn-xxl px-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100" onmouseenter="randomColor(this)" onmouseout="this.style.backgroundColor=''">
+                      <img src="images/parallelogram.png" class="card-img-top mt-2 p-3" height="200px" alt="">
+                      <div class="card-body text-center">
+                        <h5 class="card-title" id="third-name">Parallelogram</h5>
+                        <p class="card-text">Area(A) = b x h</p>
+                        <p>b=<span id="parallelogram-base">10cm,</span>
+                          h=<span id="parallelogram-height">12cm</span>
+                        </p>
+                        <button id="btn-parallelogram" class="btn btn-primary btn-xxl px-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                <div class="col">
+                  <div class="card h-100">
+                    <div class="card-body">
+                      <h5 class="card-title text-center"><u>Area Calculation</u></h5>
+                      <div class = "" id="div-container">
+                        <!--<p class="mt-2"><span id ="field-number"></span>.</p>
+                        <p id = "field-name" class="mt-2"></p>
+                        <p class="mt-2"></p>
+                        <button id="btn-convert" class="btn btn-primary">Convert to m2</button>-->
+
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100" onmouseenter="randomColor(this)" onmouseout="this.style.backgroundColor=''">
+                      <img src="images/rhombus.png" class="card-img-top mt-2 p-3" height="200px" alt="">
+                      <div class="card-body text-center">
+                        <h5 class="card-title" id="fourth-name">Rhombus</h5>
+                        <p class="card-text">Area(A) = 0.5 x d1 x d2</p>
+                        <p>d1=<span id="rhombus-d1">16cm,</span>
+                          h=<span id="rhombus-d2">8cm</span></p>
+                        <button id="btn-rhombus" class="btn btn-primary btn-xxl px-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100" onmouseenter="randomColor(this)" onmouseout="this.style.backgroundColor=''">
+                      <img src="images/pentagon.png" class="card-img-top mt-2 p-3" height="200px" alt="">
+                      <div class="card-body text-center">
+                        <h5 class="card-title" id="fifth-name">Pentagon</h5>
+                        <p class="card-text">Area(A) = 0.5 x p x b</p>
+                        <p>b=<span id="pentagon-length">6cm,</span>
+                          h=<span id="pentagon-base">10cm</span></p>
+                        <button id="btn-pentagon" class="btn btn-primary btn-xxl px-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100" onmouseenter="randomColor(this)" onmouseout="this.style.backgroundColor=''">
+                      <img src="images/ellipse.png" class="card-img-top mt-2 p-3" height="200px" alt="">
+                      <div class="card-body text-center">
+                        <h5 class="card-title" id="sixth-name">Ellipse</h5>
+                        <p class="card-text">Area(A) = πab</p>
+                        <p>b=<span id="ellipse-a">10cm,</span>
+                          h=<span id="ellipse-b">4cm</span></p>
+                        <button id="btn-ellipse" class="btn btn-primary btn-xxl px-5">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </section>
+    </main>
+    <script>
+      randomColor = function(e) {
+    e.style.background =  "#" + (Math.random() * 0xFFFFFF<<0).toString(16);
+    }
+    </script>
+    <script src="js/common.js"></script>
+    <script src="js/area.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
